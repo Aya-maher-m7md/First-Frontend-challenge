@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #19a2ae;
+    font-family: 'Jomhuria', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.top{
+    position: fixed;
+    top:-50%;
+    left:-20%;
+}
+.card{
+    width:300px;
+    height:350px;
+    background-color: #eee;
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.card-top{
+    position: absolute;
+    width:100%;
+    height:30%;
+    background: url("../images/bg-pattern-card.svg");
+    overflow: hidden;
+    border-top:1px transparent;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.profile-img{
+    position: absolute;
+    border-radius: 50%;
+    border:1px transparent;
+    top:50px;
+    overflow: hidden;
+
+}
+.profile-img img{
+    border-radius: 50%;
+    border: 5px solid white;
+}
+.base_info{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top:180px;
+}
+.base_info h1,
+.footer h1{
+    font-size: 18px;
+    font-weight: 700;
+}
+.base_info h1 span,
+.base_info p,
+.footer h1 span,
+.footer  p{
+    color: hsl(0, 0%, 59%);
+    font-weight: 400;
+}
+.footer{
+    display: grid;
+    position: absolute;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+    bottom:15px;
+}
+.footer div{
+    text-align: center;
+}
+.footer::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 140%;
+    top:-10px;
+    left:-43px;
+    background-color: hsl(0, 0%, 59%);
+}
+.bottom{
+    position: fixed;
+    bottom:-90%;
+    right:-10%;
+    z-index: -1;
+}
+.bottom img{
+    overflow: hidden;
+}
+@media (max-width:375px) {
+    .top{
+    top:-95%;
+    left:-170%;
+    }
+    .bottom{
+        bottom:-75%;
+        right:-190%;
+    }
+}
